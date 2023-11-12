@@ -104,6 +104,7 @@ hr {
 
 .accordion .qa.active .answer {
 	height: 4rem;
+	overflow-y: hidden;
 }
 
 .attribution {
