@@ -17,6 +17,80 @@ img {
 	width: 100%;
 }
 
+body {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	min-height: 100vh;
+	padding: 2rem;
+	gap: 1rem;
+	background: hsl(273, 75%, 66%);
+}
+
+.accordion {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-top: 100px;
+	border-radius: 20px;
+	background: white;
+}
+
+.accordion img {
+	position: relative;
+	transform: translateY(-120px);
+	max-width: 80%;
+	top: 0px;
+	margin-bottom: -50px;
+	filter: drop-shadow(0 35px 0 rgb(231, 231, 231));
+}
+
+.accordion .faq {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+.accordion .qa {
+	position: relative;
+	min-width: 100%;
+	padding: 1rem 1rem 1rem 2rem;
+}
+
+.accordion .qa .question {
+	position: relative;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.accordion .qa .question::before {
+	position: absolute;
+	content: '+';
+	top: 50%;
+	right: 0px;
+	transform: translateY(-55%);
+}
+
+.accordion .qa.active .question::before {
+	content: '-';
+}
+
+.accordion .qa .answer {
+	position: relative;
+	padding-right: 10px;
+	height: 0;
+	overflow: hidden;
+	transition: 1s;
+	overflow-y: auto;
+}
+
+.accordion .qa.active .answer {
+	height: fit-content;
+}
+
 .attribution {
 	font-size: 11px;
 	text-align: center;
